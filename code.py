@@ -7,8 +7,8 @@ while True:
 	executable_path = os.getcwd()+"/geckodriver"
 	options = Options()
 	options.headless = True
+	browser = webdriver.Firefox(options=options,executable_path=executable_path)
 	try:
-		browser = webdriver.Firefox(options=options,executable_path=executable_path)
 		browser.get("http://hdjshrn.tk/")
 		print(browser.page_source)
 		body = browser.find_elements_by_tag_name("body")
@@ -24,4 +24,4 @@ while True:
 	except Exception:
 		subprocess.Popen(["kill","$(pgrep)"])
 
-	browser.quit()
+	#browser.quit()
