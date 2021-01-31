@@ -13,6 +13,7 @@ def hit():
 		browser = webdriver.Firefox(options=options,executable_path=executable_path)
 	except Exception:
 		print("Failed")
+		subprocess.run(["./kill-gecko.sh"])
 		subprocess.run(["python3","code.py"])
 	
 	try:
