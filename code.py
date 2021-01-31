@@ -13,7 +13,7 @@ def hit():
 		browser = webdriver.Firefox(options=options,executable_path=executable_path)
 	except Exception:
 		print("Failed")
-		hit()
+		subprocess.run(["python3","code.py"])
 	
 	try:
 		#print("2")
