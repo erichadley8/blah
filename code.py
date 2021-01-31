@@ -3,14 +3,14 @@ import subprocess
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
-executable_path = os.getcwd()+"/geckodriver"
+EXECUT = os.getcwd()+"/geckodriver"
 options = Options()
 options.headless = True
 
 def hit():
 	try:
 		#print("1")
-		browser = webdriver.Firefox(options=options,executable_path=executable_path)
+		browser = webdriver.Firefox(options=options,executable_path=EXECUT)
 	except Exception:
 		print("Failed")
 		subprocess.run(["./kill-gecko.sh"])
