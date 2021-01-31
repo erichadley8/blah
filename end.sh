@@ -1,2 +1,2 @@
 #!/bin/bash
-kill $(prgrep firefox)
+kill $(pgrep firefox)
