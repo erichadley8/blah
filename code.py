@@ -33,7 +33,7 @@ def hit():
 			browser.switch_to.window(tab)
 			browser.close()
 	except Exception:
-		subprocess.Popen(["./end.sh"])
+		subprocess.run(["./end.sh"])
 
 while True:
 	hit()
