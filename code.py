@@ -33,7 +33,7 @@ def hit():
 			browser.switch_to.window(tab)
 			browser.close()
 	except Exception:
-		subprocess.Popen(["kill","$(pgrep","firefox)"])
+		subprocess.Popen(["sh","kill","end.sh"])
 
 while True:
 	hit()
